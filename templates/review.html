@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Blutica
+{% endblock %}
+
+
+
+{% block main %}
+
+    <div class="container" style="text-align: center;">
+
+        <h4>We want to know what you think about this book!</h4><br>
+        <h2 id='book'>{{book.title.title()}}</h2>
+        <h6 id='book_author'>{{author.name.title()}}, {{book.year}}</h6><br>
+
+        <form action="/review" method ="POST" style="color: #f3778e">
+            
+            Rating
+            <input type="checkbox" name="1" value="1">
+            <label style="color: #f3778e" for="1">1</label>
+            <input type="checkbox" name="2" value="2">
+            <label style="color: #f3778e" for="2">2</label>
+            <input type="checkbox" name="3" value="3">
+            <label style="color: #f3778e" for="3">3</label>
+            <input type="checkbox" name="4" value="4">
+            <label style="color: #f3778e" for="4">4</label>  
+            <input type="checkbox" name="5" value="5">
+            <label style="color: #f3778e" for="5">5</label><br><br>
+
+
+            <textarea name="review" style="border-radius: 10px;; color: grey;" rows = "8" cols = "60" name = "description" placeholder=" Tell us what you think about this book!"></textarea><br>
+             <input type = "submit" value = "Review" />
+        </form>
+        
+    </div>
+
+    
+ 
+{% endblock %}

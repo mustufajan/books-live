@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title%}
+Blutica
+{% endblock %}
+
+{% block main %}
+    <div style="text-align: center;">
+        <h1>Search for books and get recommendations!</h1>
+        <br>
+
+        <form action="/" method="POST">
+            <input type="text" id="search_text" name="search_text" placeholder="Search books..."><br>
+            <input type="submit" id="search" name="search" value="Search">
+        </form>
+    </div>
+
+    <div class="container" id="search_results">
+        
+        {% if not search_results %}
+            <br><br>
+            <h4 style="text-align: center;">Sorry! No matches :(</h4>
+
+        {% else %}
+            <h4>Search results</h4>
+            <ul>
+                {% for row in search_results %}
+                    <li>    
+                        <a href="{{ url_for('bookpage', isbn=row.isbn)}}">
+                            {{row.title.title()}}, {{row.name.title()}}, {{row.year}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

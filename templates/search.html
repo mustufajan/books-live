@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title%}
+Blutica
+{% endblock %}
+
+{% block main %}
+<div style="text-align: center;">
+    <h1>Search for books and get recommendations!</h1>
+    <br>
+
+    <form action="/" method="POST">
+        <input type="text" id="search_text" name="search_text" placeholder="Search books..."><br>
+        <input type="submit" id="search" name="search" value="Search">
+    </form>
+</div>
+{% endblock %}

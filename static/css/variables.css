@@ -1,0 +1,84 @@
+body {
+  background-color: black; }
+
+h1 {
+  color: white;
+  margin: 10px; }
+
+h3, h4, h6 {
+  color: white;
+  margin: 5px; }
+
+input {
+  border: 1px;
+  margin: 4px;
+  border-radius: 2px; }
+
+input[type=submit] {
+  background-color: #f22e52;
+  border: 1px;
+  border-radius: 20px;
+  color: white;
+  padding: 4px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px; }
+
+.navbar-custom {
+  background-color: black; }
+
+#search_text {
+  padding: 4px 8px;
+  border-radius: 20px;
+  width: 40%;
+  min-width: 100px; }
+
+#search_results {
+  align-items: top;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+tr, th, td {
+  text-align: left;
+  padding: 10px;
+  color: white;
+  border-radius: 20px; }
+
+#reviews {
+  align-items: top;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+#reviews_table {
+  border: 1px solid white;
+  align-items: top;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  min-width: 75%;
+  color: white; }
+
+#reviews_table_row {
+  align-items: top;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 20px; }
+
+#book, #book_author {
+  color: #f3778e; }
+
+/*# sourceMappingURL=variables.css.map */

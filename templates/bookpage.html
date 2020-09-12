@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Blutica
+{% endblock %}
+
+
+
+{% block main %}
+
+    <div class="container" style="text-align: center;">
+
+        <h1>{{book.title.title()}}</h1>
+        <h3>{{author.name.title()}}, {{book.year}}</h3>
+
+        {% if not review_count==0 %}
+            <h6>ISBN{{book.isbn}} . Rating {{(rating_total/review_count)|float}}</h6>
+        {%else%}
+        <h6>ISBN{{book.isbn}}</h6>
+        {% endif %}
+
+        {% if result is not none %}
+            <h6>Goodreads . {{result['books'][0]['average_rating']}} . {{result['books'][0]['work_ratings_count']}} ratings . {{result['books'][0]['work_text_reviews_count']}} reviews</h6><br><br>
+        {% endif %}
+    </div>
+
+    <div class="container" id="reviews" >
+
+        <h3 style="display: inline;">Reviews ({{review_count}})</h3>
+        <a style="display: inline;  text-align: right;" href="/review">+add</a>
+
+    </div>
+
+    <br>
+
+    <div class="container" id="reviews">  
+        
+        <table id="reviews_table">
+            <tr id="reviews_table_header">
+                <td>Reviewer</td>
+                <td>Review</td>
+                <td>Rating</td>
+            </tr>
+            {% for review in reviews %}
+                <tr id="reviews_table_row">
+                    <td>{{review.reviewer}}</td>
+                    <td>{{review.review}}</td>
+                    <td>{{review.rating}}</td>
+                </tr>
+            {% endfor %}    
+        </table>
+    </div>
+    
+
+    
+ 
+{% endblock %}

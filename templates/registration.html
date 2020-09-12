@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Registration - Blutica
+{% endblock %}
+
+
+{% block main %}
+<div style="text-align: center;">
+
+    <h1>Register</h1>
+    <br>
+    <h6>Access unlimited books recommendation and reviews!</h6>
+    <br>
+    <form action="/register" method="POST">
+        <input type="text" id="username" name="username" placeholder="Username"><br>
+        <input type="password" id="password" name="password" placeholder="Password" >
+        <br>
+        <input type="password" id="confirmation" name="confirmation" placeholder="Password" >
+        <br>
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+{% endblock %}
+
+

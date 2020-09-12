@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+   <h1>{{message}}, {{code}}</h1>
+   <input style="margin-left: 20px;" type="submit" value="Back" onclick="window.history.back()"> 
+{% endblock %}
